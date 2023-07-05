@@ -10,12 +10,16 @@ public class Conta {
 		this.saldo = saldo;
 	}
 
-	public void depositar() {
-
+	public void depositar(double valor) {
+		saldo += valor;
 	}
 
 	public void sacar(double valor) {
+		saldo -= valor;
+	}
 
+	public double consultarSaldo() {
+		return saldo;
 	}
 
 	public int getNumero() {

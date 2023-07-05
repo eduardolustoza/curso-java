@@ -7,16 +7,17 @@ public class ContaCorrente extends Conta {
 	public ContaCorrente(int numero, double saldo) {
 		super(numero, saldo);
 	}
-
+	
 	@Override
-	public void sacar(double valor) {
-
-		if (valor <= getSaldo() + limite) {
-			setSaldo(getSaldo() - valor);
-		} else {
-			System.out.println("Saldo insuficiente.");
-		}
-	}
+    public void sacar(double valor) {
+        double saldo = getSaldo();
+		if (valor <= saldo) {
+            saldo -= valor;
+        } else {
+            System.out.println("Saldo insuficiente.");
+        }
+    }
+    
 
 	public double getLimite() {
 		return limite;
